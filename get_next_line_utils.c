@@ -37,10 +37,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char)c)
-		{
-			//printf("\nfound\n");
 			return ((char *)s);
-		}
 		s++;
 	}
 	if ((char)c == '\0')
@@ -56,8 +53,6 @@ char	*ft_strjoin(char *s1, char *s2, size_t size)
 	size_t	i;
 	size_t	j;
 
-	// printf("buffered_data : %s\n", s1);
-	// printf("buffer        : %s\n", s2);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	result_str = (char *)ft_calloc((s1_len +s2_len + 1), sizeof(char));
