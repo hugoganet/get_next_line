@@ -18,15 +18,10 @@ static char	*read_and_store(int fd, char *buffered_data)
 		if (bytes_read == -1) // Check for error
 		{
 			free(buffer);
-			perror("Error reading file"); // ? Can I use perror ?
+			free(buffered_data);
 			return (NULL);
 		}
-		if (bytes_read > 0)
-		{
-			// printf("%s\n", buffer);
-			buffered_data = ft_strjoin(buffered_data, buffer, (size_t)bytes_read); // Join the buffer in buffered_data
-			// printf("%s\n", buffered_data);
-		}
+		buffered_data = ft_strjoin(buffered_data, buffer, (size_t)bytes_read); // Join the buffer in buffered_data up to bytes_read
 	}
 	free(buffer); // Free the buffer before exiting the function
 	return (buffered_data);

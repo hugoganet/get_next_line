@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <limits.h>
+#include <stdint.h>
 
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 128
